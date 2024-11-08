@@ -5,7 +5,7 @@ from inspect import signature
 import urllib.request, json, re, pathlib, zipfile, io, shutil, os, zlib, base64
 
 MOD_LOADER_NAME = "NotNet-GDWeave"
-DATA_FILE_PATH = pathlib.Path.home() / ".fishman"
+DATA_FILE_PATH = pathlib.Path.home() / ".wfmod"
 
 USER_AGENT = "SkyeTheFoxyFox webfishing_mod_manager/1.0"
 

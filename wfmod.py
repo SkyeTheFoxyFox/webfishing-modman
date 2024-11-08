@@ -132,7 +132,7 @@ class Main():
     def installed():
         installed_mods = get_installed_mods()
         for key, value in installed_mods.items():
-            print(f"{key}-{value["version"]}")
+            print(f"{key}-{value['version']}")
 
     def info(mod_name):
         try:

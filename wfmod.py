@@ -139,13 +139,13 @@ class Main():
             mod = get_mod(mod_name)
         except UnknownModError:
             exit(2)
-        print(f"Name: {mod["name"]}")
-        print(f"Author: {mod["owner"]}")
-        print(f"Description: {mod["latest"]["description"]}")
-        if(len(mod["community_listings"][0]["categories"]) > 0):
-            print(f"Categories: [\n    {"\n    ".join(mod["community_listings"][0]["categories"])}\n]")
+        print(f"Name: {mod['name']}")
+        print(f"Author: {mod['owner']}")
+        print(f"Description: {mod['latest']['description']}")
+        if(len(mod['community_listings'][0]['categories']) > 0):
+            print(f"Categories: [\n    {'\n    '.join(mod['community_listings'][0]['categories'])}\n]")
         if(len(mod['latest']["dependencies"]) > 0):
-            print(f"Dependencies: [\n    {"\n    ".join(mod['latest']["dependencies"])}\n]")
+            print(f"Dependencies: [\n    {'\n    '.join(mod['latest']['dependencies'])}\n]")
 
     def install(*mods, i=[]):
         for mod_name in mods:
@@ -157,9 +157,9 @@ class Main():
 
             if mod_name not in installed_mods or compare_versions(mod_data["latest"]["version_number"], installed_mods[mod_name]["version"]):
                 if mod_name not in installed_mods:
-                    print(f"Downloading {mod_data["latest"]["full_name"]}")
+                    print(f"Downloading {mod_data['latest']['full_name']}")
                 else:
-                    print(f"Updating {mod_name} {installed_mods[mod_name]["version"]} > {mod_data["latest"]["version_number"]}")
+                    print(f"Updating {mod_name} {installed_mods[mod_name]['version']} > {mod_data['latest']['version_number']}")
 
                 installed_mods[mod_name] = {}
                 installed_mods[mod_name]["version"] = mod_data["latest"]["version_number"]

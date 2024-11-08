@@ -143,9 +143,9 @@ class Main():
         print(f"Author: {mod['owner']}")
         print(f"Description: {mod['latest']['description']}")
         if(len(mod['community_listings'][0]['categories']) > 0):
-            print(f"Categories: [\n    {'\n    '.join(mod['community_listings'][0]['categories'])}\n]")
+            print("Categories: [\n    " + '\n    '.join(mod['community_listings'][0]['categories']) + "\n]")
         if(len(mod['latest']["dependencies"]) > 0):
-            print(f"Dependencies: [\n    {'\n    '.join(mod['latest']['dependencies'])}\n]")
+            print("Dependencies: [\n    " + '\n    '.join(mod['latest']['dependencies']) + "}\n]")
 
     def install(*mods, i=[]):
         for mod_name in mods:
